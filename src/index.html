@@ -11,7 +11,7 @@
     <title>Simply custom form</title>
   </head>
   <body>
-    <form>
+    <form action="#">
       <h2>Contact Form</h2>
       <div>
         <label>Name</label>
@@ -23,14 +23,20 @@
         </label>
         <input type="text" placeholder="Surname" />
       </div>
-      <div>
+      <div class="email">
         <label>Email</label>
         <input type="email" placeholder="Email" />
+        <span></span>
       </div>
-      <div>
+      <div class="password">
+        <label>Password</label>
+        <input type="password" placeholder="Password" />
+        <span></span>
+      </div>
+      <div class="message">
         <label>Message</label>
         <textarea cols="30" rows="10" placeholder="Your message"></textarea>
-        <span>Max words</span>
+        <span></span>
       </div>
       <button>Send</button>
     </form>
