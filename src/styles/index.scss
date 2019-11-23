@@ -13,6 +13,8 @@ form {
   margin-top: 25px;
   padding: 10vh;
   background: #97acbf;
+  transition: all 500ms;
+
   h2 {
     margin: 0 35px;
     text-align: center;
@@ -67,6 +69,12 @@ form {
       color: whitesmoke;
       background-color: #000;
       transition: all 0.5s;
+      cursor: pointer;
     }
+  }
+
+  span {
+    color: red;
+    font-weight: bold;
   }
 }

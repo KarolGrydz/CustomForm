@@ -8,7 +8,9 @@ import {
   sendButton
 } from './constants';
 
-import { checkEmail, checkMessageBox, checkPassword } from './utils';
+import { checkMessageBox } from './Components/message';
+import { checkEmail } from './Components/email';
+import { checkPassword } from './Components/password';
 
 import '../styles/index.scss';
 
