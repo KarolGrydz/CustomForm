@@ -2,6 +2,22 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.success {
+  height: 15vh;
+  width: 25vw;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  background-color: #0acc21;
+  border: 1px solid #000;
+  border-radius: 25px;
+  transition: all 1000ms ease-in;
+  opacity: 0;
+  margin: auto;
+  display: none;
+}
+
 form {
   border: black 1px solid;
   border-radius: 15px;
@@ -13,7 +29,8 @@ form {
   margin-top: 25px;
   padding: 10vh;
   background: #97acbf;
-  transition: all 500ms;
+  transition: all 500ms ease-out;
+  opacity: 1;
 
   h2 {
     margin: 0 35px;
