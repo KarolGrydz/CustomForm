@@ -3,8 +3,7 @@
 }
 
 .success {
-  height: 15vh;
-  width: 25vw;
+  width: 200px;
   font-size: 36px;
   font-weight: bold;
   text-align: center;
@@ -12,10 +11,10 @@
   background-color: #0acc21;
   border: 1px solid #000;
   border-radius: 25px;
-  transition: all 1000ms ease-in;
+  transition: all 500ms ease-in;
   opacity: 0;
   margin: auto;
-  display: none;
+  padding: 25px;
 }
 
 form {

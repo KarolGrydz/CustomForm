@@ -3,7 +3,7 @@ export const hideForm = () => {
   form.style.opacity = '0';
   setTimeout(() => {
     form.style.display = 'none';
-  }, 800);
+  }, 500);
 };
 
 export const createSuccessWindow = () => {
@@ -12,13 +12,11 @@ export const createSuccessWindow = () => {
   div.innerHTML = 'Success!';
   div.classList.add('success');
   body.append(div);
-  showSuccessWindow();
+  showSuccessWindow(div);
 };
 
-const showSuccessWindow = () => {
-  const success = document.querySelector('.success');
+const showSuccessWindow = element => {
   setTimeout(() => {
-    success.style.opacity = '1';
-    success.style.display = 'grid';
+    element.style.opacity = '1';
   }, 1000);
 };
