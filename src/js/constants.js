@@ -1,4 +1,5 @@
 export const sendButton = document.querySelector('button');
+export const sendButtonInfo = document.querySelector('.button span');
 export const emailBox = document.querySelector('input[type="email"]');
 export const emailInfo = document.querySelector('.email span');
 export const passwordBox = document.querySelector('input[type="password"]');

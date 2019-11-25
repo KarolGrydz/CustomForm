@@ -9,6 +9,7 @@ export const checkPassword = (pass, spanPassword) => {
   let number = false;
   let specjal = false;
   let uppercase = false;
+  let permit = false;
 
   number = checkNumberInPassword(arrPass);
   specjal = checkSpecjalInPassword(arrPass);
@@ -20,6 +21,8 @@ export const checkPassword = (pass, spanPassword) => {
       spanPassword.innerHTML = ' ';
       if (uppercase) {
         spanPassword.innerHTML = ' ';
+        permit = true;
+        return permit;
       } else {
         spanPassword.innerHTML = 'Use uppercase';
       }

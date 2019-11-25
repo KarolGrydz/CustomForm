@@ -5,7 +5,8 @@ import {
   passwordInfo,
   messageBox,
   messageInfo,
-  sendButton
+  sendButton,
+  sendButtonInfo
 } from './constants';
 
 import { checkMessageBox } from './Components/message';
@@ -16,14 +17,29 @@ import { hideForm, createSuccessWindow } from './Components/button';
 
 import '../styles/index.scss';
 
+let emailOK = false;
+let passwordOK = false;
+
 sendButton.addEventListener('click', e => {
   e.preventDefault();
-  hideForm();
-  createSuccessWindow();
+  if (emailOK) {
+    if (passwordOK) {
+      hideForm();
+      createSuccessWindow();
+    } else {
+      sendButtonInfo.innerHTML = 'Please insert password';
+    }
+  } else {
+    sendButtonInfo.innerHTML = 'Please insert email';
+  }
 });
-emailBox.addEventListener('keyup', e => checkEmail(e.target.value, emailInfo));
-passwordBox.addEventListener('keyup', e =>
-  checkPassword(e.target.value, passwordInfo)
+emailBox.addEventListener(
+  'keyup',
+  e => (emailOK = checkEmail(e.target.value, emailInfo))
+);
+passwordBox.addEventListener(
+  'keyup',
+  e => (passwordOK = checkPassword(e.target.value, passwordInfo))
 );
 messageBox.addEventListener('keyup', e =>
   checkMessageBox(e.target.value, messageBox, messageInfo)
